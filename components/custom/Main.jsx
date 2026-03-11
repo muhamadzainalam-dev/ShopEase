@@ -50,7 +50,12 @@ export default function Main() {
         });
       }
     } catch (err) {
-      setError(err.message);
+      toast({
+        title: "Error",
+        description: `${err.message}`,
+        variant: "destructive",
+      });
+      console.log(err);
     }
   };
 
@@ -62,7 +67,7 @@ export default function Main() {
       setCurrentIndex((prevIndex) =>
         prevIndex + productsPerPage >= products.length
           ? 0
-          : prevIndex + productsPerPage
+          : prevIndex + productsPerPage,
       );
     };
 
@@ -70,7 +75,7 @@ export default function Main() {
       setCurrentIndex((prevIndex) =>
         prevIndex - productsPerPage < 0
           ? Math.max(products.length - productsPerPage, 0)
-          : prevIndex - productsPerPage
+          : prevIndex - productsPerPage,
       );
     };
 
@@ -145,7 +150,7 @@ export default function Main() {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          `https://api.bestbuy.com/v1/products?apiKey=7KA6o4t838JBCfpUQjBC65uK&pageSize=100&page=10&format=json`
+          `https://api.bestbuy.com/v1/products?apiKey=7KA6o4t838JBCfpUQjBC65uK&pageSize=100&page=10&format=json`,
         );
         setProducts(response.data.products);
         setFilteredProducts(response.data.products);
@@ -164,7 +169,7 @@ export default function Main() {
 
     if (query) {
       filtered = filtered.filter((product) =>
-        product.name.toLowerCase().includes(query.toLowerCase())
+        product.name.toLowerCase().includes(query.toLowerCase()),
       );
       setIsSearching(true);
     } else {

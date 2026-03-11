@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
 
 const MONGODB_URI =
-  "mongodb+srv://Digital_Monster:Zain-03120014927@karedoorpehnowebsitedat.qpyve.mongodb.net/?retryWrites=true&w=majority&appName=KaredoOrPehnoWebsiteData";
+  "mongodb+srv://admin:admin@cluster0.cqkw3tv.mongodb.net/?appName=Cluster0";
 const MONGODB_DB = "User-Data";
 const COLLECTION_NAME = "User-Product";
 
@@ -39,7 +39,7 @@ export async function POST(request) {
       .updateOne(
         { sku },
         { $setOnInsert: { sku, name, salePrice, image } },
-        { upsert: true }
+        { upsert: true },
       );
 
     const message = result.upsertedCount
@@ -51,7 +51,7 @@ export async function POST(request) {
         message,
         sku: result.sku || sku,
       }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
+      { status: 200, headers: { "Content-Type": "application/json" } },
     );
   } catch (error) {
     console.error("MongoDB Insert Error:", error);
@@ -60,7 +60,7 @@ export async function POST(request) {
         error: "Failed to add to cart",
         details: error.message,
       }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
+      { status: 500, headers: { "Content-Type": "application/json" } },
     );
   }
 }
@@ -96,7 +96,7 @@ export async function GET(request) {
         error: "Failed to fetch products",
         details: error.message,
       }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
+      { status: 500, headers: { "Content-Type": "application/json" } },
     );
   }
 }
@@ -111,7 +111,7 @@ export async function DELETE(request) {
     if (result.deletedCount === 1) {
       return NextResponse.json(
         { message: "Product deleted successfully" },
-        { status: 200 }
+        { status: 200 },
       );
     } else {
       return NextResponse.json({ error: "Product not found" }, { status: 404 });
@@ -120,7 +120,7 @@ export async function DELETE(request) {
     console.error("MongoDB Delete Error:", error);
     return NextResponse.json(
       { error: "Failed to delete product", details: error.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
