@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ECommerceApp
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Auth](https://img.shields.io/badge/Auth-NextAuth-000000?style=for-the-badge)](https://next-auth.js.org/)
 
-First, run the development server:
+E-commerce web application showcasing **product browsing**, **cart flow**, and **front-end architecture** built for performance and clean UX.
+
+---
+
+## 💼 Skills & Tech Used
+
+- **Framework:** Next.js
+- **UI:** React, React DOM
+- **Auth:** NextAuth (`next-auth`)
+- **Database:** MongoDB driver (`mongodb`)
+- **UI Components:** Radix UI (Accordion, Tabs, Select, Toast, Slider, etc.)
+- **Styling:** Styled Components, Tailwind CSS (+ `tailwindcss-animate`, `tailwind-merge`)
+- **Networking:** Axios
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Component Patterns:** `clsx`, `class-variance-authority`
+- **Code Quality:** ESLint, `eslint-config-next`
+- **CSS Tooling:** PostCSS
+
+---
+
+## 🚀 Run Locally
 
 ```bash
+git clone https://github.com/muhamadzainalam-dev/ECommerceApp.git
+cd ECommerceApp
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
+```text
+http://localhost:3000
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 👨‍💻 Author
 
-## Learn More
+**Muhammad Zain Alam**  
+Frontend Developer | React.js & Next.js Enthusiast
 
-To learn more about Next.js, take a look at the following resources:
+[![Email](https://img.shields.io/badge/Email-muhamadzainalam.dev%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:muhamadzainalam.dev@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/muhamadzain-dev/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github)](https://github.com/muhamadzainalam-dev)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<div align="center">
+  <strong>⭐ Star this repository if you found it useful!</strong>
+</div>
